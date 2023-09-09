@@ -1,14 +1,12 @@
-import express from 'express';
-import fileUpload from 'express-fileupload';
-import pdfParse from 'pdf-parse';
-import fetch from 'node-fetch';
-
+const express = require('express');
+const fileUpload = require('express-fileupload');
+const pdfParse = require('pdf-parse');
+const fetch = require('node-fetch');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3030;
 
 // Initialize OpenAI API with your API key
-
 
 app.use('/', express.static('public'));
 app.use(fileUpload());
